@@ -2,6 +2,7 @@ FROM node:hydrogen-buster
 COPY graphserver.js .
 COPY package.json .
 COPY UScities.json .
+FROM alpine:latest
 RUN npm install &&\
     apk update &&\
     apk upgrade
