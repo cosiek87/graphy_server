@@ -2,7 +2,7 @@ FROM node:21.0-bookworm-slim
 COPY graphserver.js .
 COPY package.json .
 COPY UScities.json .
-FROM alpine:latest
+FROM alpine:3.20.3
 RUN npm install &&\
     apk update &&\
     apk upgrade
